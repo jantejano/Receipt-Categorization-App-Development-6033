@@ -1,0 +1,160 @@
+.app-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+/* Ensure proper stacking and visibility */
+.sidebar {
+  z-index: 1000;
+}
+
+/* Help Hub Z-Index Override */
+.quest-help-hub {
+  z-index: 10000 !important;
+}
+
+/* Ensure Help Hub is above everything */
+[data-quest-help-hub] {
+  z-index: 10000 !important;
+}
+
+/* Quest SDK Help Hub specific overrides */
+.quest-help-hub-container {
+  z-index: 10000 !important;
+  position: fixed !important;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Smooth transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* File upload styling */
+.file-upload-area {
+  border: 2px dashed #d1d5db;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.file-upload-area:hover {
+  border-color: #3b82f6;
+  background-color: #f8fafc;
+}
+
+.file-upload-area.dragover {
+  border-color: #3b82f6;
+  background-color: #eff6ff;
+}
+
+/* Receipt card animations */
+.receipt-card {
+  transition: all 0.3s ease;
+}
+
+.receipt-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Category badge styles */
+.category-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Chart container */
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+/* Force sidebar visibility on desktop */
+@media (min-width: 1024px) {
+  .sidebar-desktop {
+    position: relative !important;
+    transform: translateX(0) !important;
+    display: block !important;
+  }
+}
+
+/* Ensure main content doesn't overlap sidebar */
+.main-content {
+  width: 100%;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+@media (min-width: 1024px) {
+  .main-content-with-sidebar {
+    margin-left: 0;
+  }
+}
+
+/* Override any conflicting styles */
+.sidebar-container {
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* Ensure proper mobile menu button visibility */
+.mobile-menu-button {
+  display: block !important;
+}
+
+@media (min-width: 1024px) {
+  .mobile-menu-button {
+    display: none !important;
+  }
+}
+
+/* Help Hub positioning and z-index fixes */
+.help-hub-wrapper {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: 10000 !important;
+}
+
+/* Override Quest SDK styles if needed */
+.questlabs-help-hub {
+  z-index: 10000 !important;
+}
+
+/* Ensure navbar and sidebar don't interfere */
+.navbar {
+  z-index: 1000;
+}
+
+.sidebar {
+  z-index: 1000;
+}
+
+/* Help hub should be above everything */
+.help-hub-container {
+  z-index: 10001 !important;
+}
